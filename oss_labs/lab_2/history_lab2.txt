@@ -1,0 +1,39 @@
+  312  mkdir test
+  313  cd test
+  314  touch file
+  315  ls -l file
+  316  chmod 0000 file
+  317  echo "тест" > file
+  318  cat file
+  319  chmod 0200 file
+  320  ll file
+  321  echo "test" > file
+  322  cat file
+  323  chmod 0240 file
+  324  ll file
+  325  cat file
+  326  chmod 0640 file
+  327  ll file
+  328  cat file
+  329  mkdir dir
+  330  touch dir/new_file
+  331  echo "file 2" > dir/new_file 
+  332  ls dir
+  333  chmod 0666 dir
+  334  ls -l dir
+  335  ls -l
+  336  cat dir/new_file
+  337  chown root file
+  338  chgrp root file
+  339  umask 0177
+  340  touch file1
+  341  ll file1
+  342  umask 0000
+  343  touch file2
+  344  ll file2
+  345  su
+  346  cat file
+  347  su
+  348  cat file
+  349  ls -lR > ../access_info.txt
+  350  history > history_lab2.txt

@@ -1,0 +1,10 @@
+.:
+итого 4
+drw-rw-rw-. 2 yerseg yerseg 22 ноя  6 19:36 dir
+-r--r-----. 1 root   yerseg  5 ноя  6 19:34 file
+-rw-------. 1 yerseg yerseg  0 ноя  6 19:38 file1
+-rw-rw-rw-. 1 yerseg yerseg  0 ноя  6 19:38 file2
+
+./dir:
+итого 0
+-????????? ? ? ? ?            ? new_file

@@ -1,0 +1,264 @@
+  259  touch lab_5.txt
+  260  gedit lab_5.txt 
+  261  ps -e
+  262  ps -ef
+  263  ps -eF
+  264  ps -ely
+  265  ps ax
+  266  ps axu
+  267  ps -ejH
+  268  ps axjf
+  269  ps -eo euser,ruser,suser,fuser,f,comm,label
+  270  ps axZ
+  271  ps -eM
+  272  ps -U root -u root u
+  273  ps -U root
+  274  ps -U root -u
+  275  ps -U root -u root
+  276  ps -U root -u root u
+  277  ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+  278  ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+  279  ps -Ao pid,tt,user,fname,tmout,f,wchan
+  280  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  281  jobs
+  282  ps j
+  283  bg
+  284  jobs
+  285  ps j
+  286  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done &)
+  287  jobs
+  288  ps -j
+  289  fg
+  290  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done )
+  291  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  292  ps -C systemd -o pid=
+  293  ps -C systemd -o pid='systemmd'
+  294  ps -C systemd -o pid=systemmd
+  295  ps -C systemd -o pid=
+  296  ps -q номер -o comm=
+  297  ps -q 10 -o comm=
+  298  ps -q 9 -o comm=
+  299  tail -f ~/test.out
+  300  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  301  jobs
+  302  ps j
+  303  bg
+  304  jobs
+  305  ps j
+  306  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done &)
+  307  jobs
+  308  ps -j
+  309  fg
+  310  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done )
+  311  fg 1
+  312  fg %1
+  313  fg %2
+  314  fg %1
+  315  fg %3
+  316  fg %2
+  317  fg %1
+  318  fg %3
+  319  jobs
+  320  fg
+  321  jobs
+  322  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  323  bg
+  324  jobs
+  325  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done & )
+  326  jobs
+  327  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) 
+  328  tail -f ~/test.out
+  329  trap 'echo Завершение работы...; sleep 2' EXIT
+  330  trap -p EXIT
+  331  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  332  bg
+  333  jobs
+  334  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done & )
+  335  jobs
+  336  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) 
+  337  bg
+  338  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  339  jobs
+  340  fg 2
+  341  fg 3
+  342  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  343  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  344  jobs
+  345  ps j
+  346  kill -SIGSTOP %1
+  347  jobs
+  348  kill -SIGTERM %2
+  349  jobs
+  350  fg
+  351  shell
+  352  sh
+  353  ps -e
+  354  jobs
+  355  cat test-trap.sh
+  356  touch test-trap.sh
+  357  cat test-trap.sh
+  358  chmod +x test-trap.sh 
+  359  ./test-trap.sh 
+  360  cat /proc/version
+  361  uname -a
+  362  cat /proc/meminfo
+  363  cat /sys/devices/system/node/node0/meminfo
+  364  free
+  365  cat /cpuinfo
+  366  cat /proc/cpuinfo
+  367  cat /proc/uptime
+  368  uptime
+  369  cat  /proc/self
+  370  cat /proc/self
+  371  echo $$
+  372  ls -l /proc/self
+  373  ls -ld /proc/$$
+  374  cat /proc/PID_процесса/stat
+  375  read pid tcomm state other < /proc/$$/stat
+  376  echo "Процесс $pid $tcomm находится в состоянии $state"
+  377  ls -l /dev/std*
+  378  ls -l /dev/fd/
+  379  ls -l /proc/self/fd
+  380  ls -l /proc/self/fd > /tmp/ls.out 2> /tmp/ls.err
+  381  cat /tmp/ls.out
+  382  ls -l /proc/self/fd 0> /tmp/ls.out
+  383  ls -l /proc/self/fd 0> /tmp/ls.in
+  384  ls -l /proc/self/fd 3> /tmp/ls.in
+  385  ls -l /proc/self/fd 0> /tmp/ls.in
+  386  cat ls.in
+  387  cat /tmp/ls.in
+  388  lkn
+  389  cat /tmp/ls.in
+  390  ls -l /proc/self/fd 0> /tmp/ls.in
+  391  cat /tmp/ls.in
+  392  ( cat | head ) > ~/test.out 2> ~/test.err
+  393  ps j
+  394  ls -l /proc/4428/fd
+  395  ls -l /proc/6359/fd
+  396  ls -l /proc/6543/fd
+  397  ls -l /proc/6552/fd
+  398  ps j
+  399  ls -l /proc/6421/fd
+  400  ls -l /proc/6422/fd
+  401  ls -l /proc/6423/fd
+  402  cat ~/test.out
+  403  cat ~/test.err
+  404  cat < ~/fifo1
+  405  cat < ~/fifo1
+  406  touch test_read.sh
+  407  gedit test_read.sh 
+  408  chmod +x test_read.sh
+  409  ./test_read.sh 
+  410  ps -l
+  411  exec ps -l
+  412  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  413  bg
+  414  jobs
+  415  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done & )
+  416  jobs
+  417  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) 
+  418  bg
+  419  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  420  jobs
+  421  fg 2
+  422  fg 3
+  423  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  424  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  425  jobs
+  426  ps j
+  427  kill -SIGSTOP %1
+  428  jobs
+  429  kill -SIGTERM %2
+  430  jobs
+  431  fg
+  432  shell
+  433  sh
+  434  ps -e
+  435  jobs
+  436  cat test-trap.sh
+  437  touch test-trap.sh
+  438  cat test-trap.sh
+  439  chmod +x test-trap.sh 
+  440  ./test-trap.sh 
+  441  cat /proc/version
+  442  uname -a
+  443  cat /proc/meminfo
+  444  cat /sys/devices/system/node/node0/meminfo
+  445  free
+  446  cat /cpuinfo
+  447  cat /proc/cpuinfo
+  448  cat /proc/uptime
+  449  uptime
+  450  cat  /proc/self
+  451  cat /proc/self
+  452  echo $$
+  453  ls -l /proc/self
+  454  ls -ld /proc/$$
+  455  cat /proc/PID_процесса/stat
+  456  read pid tcomm state other < /proc/$$/stat
+  457  echo "Процесс $pid $tcomm находится в состоянии $state"
+  458  ls -l /dev/std*
+  459  ls -l /dev/fd/
+  460  ls -l /proc/self/fd
+  461  ls -l /proc/self/fd > /tmp/ls.out 2> /tmp/ls.err
+  462  cat /tmp/ls.out
+  463  ls -l /proc/self/fd 0> /tmp/ls.out
+  464  ls -l /proc/self/fd 0> /tmp/ls.in
+  465  ls -l /proc/self/fd 3> /tmp/ls.in
+  466  ls -l /proc/self/fd 0> /tmp/ls.in
+  467  cat ls.in
+  468  cat /tmp/ls.in
+  469  lkn
+  470  cat /tmp/ls.in
+  471  ls -l /proc/self/fd 0> /tmp/ls.in
+  472  cat /tmp/ls.in
+  473  ( cat | head ) > ~/test.out 2> ~/test.err
+  474  mkfifo ~/fifo1
+  475  cat > ~/fifo1
+  476  ls -l /proc/self/fd 0< /tmp/ls.in
+  477  cat /tmp/ls.in
+  478  sh
+  479  ps -l
+  480  exec 3> ~/test.out
+  481  ls -l /proc/$$/fd
+  482  echo Test
+  483  echo Test3 >&3
+  484  cat ~/test.out
+  485  echo $$
+  486  ls -l /proc/4428/fdinfo/
+  487  cat /proc/3203/fdinfo/3
+  488  cat /proc/4428/fdinfo/3
+  489  exec 4< ~/test.out
+  490  ls -l /proc/$$/fd
+  491  cat ~/test.out
+  492  cat <&4
+  493  cat ~/test.out
+  494  cat <&4
+  495  echo Test4 >&3
+  496  cat ~/test.out
+  497  cat <&4
+  498  rm ~/test.out
+  499  ls -l /proc/$$/fd
+  500  cat ~/test.out
+  501  touch lab_5.sh
+  502  chmod +x lab_5.sh
+  503  ps -o
+  504  ps -o F
+  505  ps -oF
+  506  ps S
+  507  ps PID
+  508  ps pid
+  509  ps -o pid
+  510  ps 
+  511  ps -l
+  512  ps -a
+  513  ps axo
+  514  ps axo ruid,euid
+  515  ps axo ruid,euid,cmd
+  516  ps -e
+  517  ps -e -o uuid
+  518  ps -e -o uid
+  519  ps -e -o euid
+  520  ps -e -o ruid,euid,cmd
+  521  ps -e -o ruid,euid,cmd | xargs -l ./lab_5.sh 
+  522  history > lab_5_history.txt

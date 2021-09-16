@@ -1,0 +1,108 @@
+ps -e
+ps -ef
+ps -eF
+ps -ely
+ps ax
+ps axu
+ps -eLf
+ps axms
+ps -eo euser,ruser,suser,fuser,f,comm,label
+ps axZ
+ps -eM
+ps -U root -u root u
+ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+ps -C systemd -o pid=
+ps -q 10 -o comm=
+( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+tail -f ~/test.out
+Ctrl+z
+jobs
+ps j
+bg
+jobs
+ps j
+( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+jobs
+fg %1
+Ctrl+c
+fg %2
+Ctrl+c
+( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+jobs
+ps j
+tail -f ~/test.out
+kill -SIGSTOP %1
+jobs
+kill -SIGTERM %2
+jobs
+fg
+Ctrl+c
+sh
+  sh-4.3$ trap 'echo Завершение работы...; sleep 2' EXIT
+  sh-4.3$ trap -p EXIT
+  Ctrl+d
+cat test-trap.sh
+chmod +x test-trap.sh
+./test-trap.sh
+Ctrl+c
+cat /proc/version
+uname -a
+cat /proc/meminfo
+cat /sys/devices/system/node/node0/meminfo
+free
+cat /proc/cpuinfo
+cat /proc/uptime
+uptime
+echo $$
+ls -l /proc/self
+ls -ld /proc/$$
+read pid tcomm state other < /proc/$$/stat
+echo "Процесс $pid $tcomm находится в состоянии $state"
+ls -l /dev/std*
+ls -l /dev/fd/
+ls -l /proc/self/fd
+ls -l /proc/self/fd > /tmp/ls.out 2> /tmp/ls.err
+cat /tmp/ls.out
+ls -l /proc/self/fd 0< /tmp/ls.in
+cat /tmp/ls.in
+( cat | head ) > ~/test.out 2> ~/test.err
+ps j
+ls -l /proc/6421/fd
+ls -l /proc/6422/fd
+ls -l /proc/6423/fd
+mkfifo ~/fifo1
+cat > ~/fifo1
+cat < ~/fifo1
+ps j
+ls -l /proc/6543/fd
+ls -l /proc/6552/fd
+cat < ~/fifo1
+./test_read.sh
+sh
+  ps -l
+  exec ps -l
+ps -l
+exec 3> ~/test.out
+ls -l /proc/$$/fd
+echo Test
+echo Test3 >&3
+cat ~/test.out
+echo $$
+ls -l /proc/4428/fdinfo/
+cat /proc/4428/fdinfo/3
+exec 4< ~/test.out
+ls -l /proc/$$/fd
+cat ~/test.out
+cat <&4
+cat ~/test.out
+cat <&4
+echo Test4 >&3
+cat ~/test.out
+cat <&4
+cat <&4
+rm ~/test.out
+ls -l /proc/&&/fd
+cat ~/test.out
+ps -e -o ruid,euid,cmd | xargs -l ./lab_5.sh 
