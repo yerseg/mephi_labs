@@ -1,0 +1,15 @@
+Test key: 4b6579214b6579214b6579214b657921
+Test data: 48656c6c6f2148656c6c6f2148656c6c6f2148656c6c6f2148656c6c6f2148656c6c6f2148656c6c
+Test modified data: 08656c6c6f2148656c6c6f2148656c6c6f2148656c6c6f2148656c6c6f2148656c6c6f2148656c6c
+Omac: 01a59038ca2862f494723fc333964d31
+Tmac: 1f15e67e69e826a3
+Hmac: 371b43e798524e7f764d0b66db7c4e4bd12fa10d202c4c4d258d6e997e24b24d
+Omac modified: 8309e3b9fd0600f26ed117f0f53e5187
+Tmac modified: 81eee13beb088677
+Hmac modified: 5e7c27d916e0052eaf161d74569f8c702a427e06c402393728beaa10b77fc62a
+Omac verify result: 1
+Tmac verify result: 1
+Hmac verify result: 1
+Omac verify result (modified): 0
+Tmac verify result (modified): 0
+Hmac verify result (modified): 0
